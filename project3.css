@@ -1,0 +1,207 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: url('YS FITNESS CLUB (2).png') no-repeat center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Content and Buttons */
+.content {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.buttons {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #f7d600;
+    color: black;
+    text-decoration: none;
+    padding: 20px 60px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    background-color: orange; /* Consistent hover effect */
+}
+
+/* Admin Login Form Styling */
+.form-container {
+    display: none;
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.85); /* More elegant semi-transparent black */
+    padding: 30px;
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow for a premium feel */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Adds a blur effect for better readability */
+}
+
+.form-container h2 {
+    color: #f7d600; /* Golden heading to match the buttons */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.form-container label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #f7d600; /* Matches the theme */
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent input background */
+    color: #fff;
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #f7d600; /* Highlight border on focus */
+    box-shadow: 0 0 8px #f7d600; /* Glow effect */
+}
+
+.form-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(45deg, #ff0000, #cc0000); /* Gradient for the button */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button:hover {
+    background: linear-gradient(45deg, #cc0000, #ff0000); /* Reversed gradient on hover */
+    transform: translateY(-2px); /* Hover lift effect */
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.5); /* Red glow shadow */
+}
+
+/* Responsive Styling */
+
+/* Mobile-first approach (starting from smaller screens) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .content {
+        font-size: 1.2rem;
+    }
+
+    .buttons {
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 15px 40px;
+        font-size: 1.4rem;
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    .form-container {
+        max-width: 80%;
+        padding: 25px;
+    }
+
+    .form-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-container input {
+        font-size: 1rem;
+    }
+
+    .form-container button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: auto; /* Allow body to adjust its height */
+    }
+
+    .content {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        margin: 5px 0;
+        width: 90%;
+    }
+
+    .form-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-container input {
+        font-size: 1rem;
+    }
+
+    .form-container button {
+        font-size: 1.2rem;
+    }
+}

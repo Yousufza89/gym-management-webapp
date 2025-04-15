@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SY Fitness Club</title>
+    <link rel="stylesheet" href="project3.css">
+</head>
+<body>
+    <div class="content">
+        <div class="buttons">
+            <button class="btn" id="adminLoginButton">Admin Login</button>
+            <a href="project.html" class="btn">Member Login</a>
+        </div>
+        <div class="form-container" id="formContainer" style="display: none;">
+            <form id="adminLoginForm" class="login-form">
+                <label for="adminId">Admin ID:</label>
+                <input type="text" id="adminId" name="adminId" required>
+                <br><br>
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" name="adminPassword" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const adminLoginButton = document.getElementById('adminLoginButton');
+        const formContainer = document.getElementById('formContainer');
+        const adminLoginForm = document.getElementById('adminLoginForm');
+
+        adminLoginButton.addEventListener('click', () => {
+            formContainer.style.display = formContainer.style.display === 'none' || !formContainer.style.display
+                ? 'block'
+                : 'none';
+        });
+
+        adminLoginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            
+            const adminId = document.getElementById('adminId').value;
+            const adminPassword = document.getElementById('adminPassword').value;
+
+            const validAdminId = 'admin123';
+            const validPassword = 'securePass';
+
+            if (adminId === validAdminId && adminPassword === validPassword) {
+                alert('Login successful!');
+
+                window.location.href = './member_page.html'; 
+            } else {
+                alert('Invalid ID or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
